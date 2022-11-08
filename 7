@@ -1,0 +1,54 @@
+App.js
+
+import './App.css';
+import Hello from './mycomponent/Hello';
+import Bye from './mycomponent/Bye';
+
+function App() {
+  return (
+    <div className="App">
+      <Hello/>
+      <Bye/>
+    </div>
+  );
+}
+
+
+export default App;
+
+Hello.js
+
+import React from 'react'
+
+function Hello() {
+  return (
+    <div>
+      <h1>Ram</h1>
+      <li>Mighty raju</li>
+    </div>
+  )
+}
+
+export default Hello
+
+// rfce
+// Functional component
+
+
+Bye.js
+
+import React,{Component} from "react";
+
+
+class Bye  extends React.Component{
+    render(){
+        return(
+            <div>
+                <h1>Hey Namaste!!</h1>
+                <li>Yash Jagdale</li>
+            </div>
+
+        )
+    }
+}
+export default Bye;

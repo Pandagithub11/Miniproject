@@ -1,0 +1,73 @@
+App.js
+
+
+
+import './App.css';
+import Main from './my-component/Main';
+import Home from './my-component/Home';
+import Address from './my-component/Address';
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+function App() {
+  return (
+    <div className="App">
+      <Main />
+      <BrowserRouter>
+        <Routes>
+          <Route path='/Home' element={<Home />} />
+          <Route path='/Address' element={<Address />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
+}
+
+export default App;
+
+
+Address.js
+
+
+import React from 'react'
+
+function Address() {
+  return (
+    <div>
+      <h1>This is address</h1>
+    </div>
+  )
+}
+
+export default Address
+
+Home.js
+
+import React from 'react'
+
+function Home() {
+  return (
+    <div>
+      <h1>My sweet Home</h1>
+    </div>
+  )
+}
+
+export default Home
+
+
+Main.js
+
+
+import React from 'react'
+
+function Main() {
+  return (
+    <div>
+        <li><a href='/Address'>List 2</a></li>
+      <li><a href='/Home'>List 1</a></li>
+    
+    </div>
+  )
+}
+
+export default Main
+

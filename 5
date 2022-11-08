@@ -1,0 +1,44 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Form</title>
+</head>
+<body>
+    <form>
+        <p>Name:</p>
+        <input type="text" id="Name" name="Name"><br>
+        <label>Email</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label>Password</label><br>
+        <input type="password" id="password" name="password"><br>
+        <button onclick="validation()">submit</button>
+
+    </form>
+
+    <script>
+        function validation(){
+
+            
+            var Name = document.getElementById("Name").value
+            var email = document.getElementById("email").value
+            var password = document.getElementById("password").value
+            var re=/^[A-Za-z]{3,8}$/;
+            var re1=/^[A-Za-z0-9 ]+@[A-Za-z]+\.[A-Za-z]{2,4}$/;
+            var re2=/^[A-Za-z0-9!@#$%^&*]{5,8}$/;
+
+            if(re.test(Name) &&  re1.test(email) && re2.test(password)){
+                alert("done");
+                return true
+            }
+            else{
+                alert("error");
+                return false;
+            }
+    }
+
+    </script>
+</body>
+</html> 

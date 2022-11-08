@@ -1,0 +1,24 @@
+curd file
+
+const fs = require("fs");
+const path=require("path");
+const dirpath=path.join(__dirname,'curd');
+const filepath=`${dirpath}/sample.txt`;
+
+fs.writeFileSync(filepath,"Good Night");
+fs.readFile(filepath,'utf-8',(err,item)=>{
+    console.log(item)
+})
+// Append
+fs.appendFile(filepath,"Good Morning",(err)=>{
+    if(!err) console.log("File is appended")
+}
+);
+// Rename
+
+fs.rename(filepath,`${dirpath}/example.txt`,(err)=>{
+    if(!err) console.log("File is renamed")
+})
+// Delet
+fs.unlinkSync(`${dirpath}/example.txt
+

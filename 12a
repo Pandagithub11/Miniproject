@@ -1,0 +1,12 @@
+const express=require('express');
+const app = express();
+const route= express.Router();
+const port=9001;
+app.use(route);
+route.get("/",function(req,res,next){
+    res.send("Hello world this is default")
+})
+route.get("/user",function(req,res,next){
+    res.send("Hello world from user")
+})
+app.listen(port);

@@ -1,0 +1,64 @@
+App.js
+
+
+import './App.css';
+import Class from './my-component/Class';
+import Hook from './my-component/Hook';
+function App() {
+  return (
+    <div className="App">
+     <Class/>
+     <Hook/>
+    </div>
+  );
+}
+
+export default App;
+
+
+class.js
+import React from "react";
+class Class extends React.Component{
+    constructor()
+    {
+        super()
+        this.state={
+            count:0
+        }
+
+    }
+    Increment()
+    {
+        this.setState({
+            count:this.state.count+1
+        })
+    }
+    render()
+    {
+        return(
+            <div>
+                count={this.state.count}
+                <button onClick={()=>this.Increment()}>Click Me</button>
+            </div>
+        )
+    }
+}
+export default Class
+
+Hook.js
+
+import React , {useState} from 'react'
+
+function Hook() {
+  const[count,setCount]=useState(0)
+    return (
+    <div>
+      <p>{count}</p>
+      <button onClick={()=>setCount(count+1)}>Click here</button>
+    </div>
+  )
+}
+
+export default Hook
+
+

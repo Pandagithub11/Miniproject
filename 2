@@ -1,0 +1,21 @@
+import math
+a=input("Enter plain text") 
+b=input("Enter key:")
+p=a.upper() 
+v=b.upper()
+c=math.ceil(len(p)/len(v)) 
+k=v*c
+dict={'A':0,"B":1,"C":2,"D":3,"E":4,"F":5,"G":6,"H":7,"I":8,"J":9,"K":10,"L":11," M":12,"N":13,"O":14,"P":15,"Q":16,"R":17,"S":18,"T":19,"U":20,"V":21,"W":22,"X":2 3,"Y":24,"Z":25}
+a=len(p) 
+l=[] 
+for i in range(a): 
+p1=p[i]
+k1=k[i]
+x=dict.get(p1) 
+y=dict.get(k1) 
+z=(x+y)%26
+key_list = list(dict.keys()) 
+val_list = list(dict.values())
+position = val_list.index(z) 
+l.append(key_list[position])
+print(l)

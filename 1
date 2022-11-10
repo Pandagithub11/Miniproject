@@ -1,0 +1,24 @@
+a=input("Enter message:") 
+b=int(input("enter key:"))
+c=a.upper()
+l=[]
+d={'A':0,"B":1,"C":2,"D":3,"E":4,"F":5,"G":6,"H":7,"I":8,"J":9,"K":10,"L":11,"M": 12,"N":13,"O":14,"P":15,"Q":16,"R":17,"S":18,"T":19,"U":20,"V":21,"W":22,"X":23," Y":24,"Z":25}
+for i in range(len(c)): 
+x=d.get(c[i])
+y=(x+b)%26
+key_list = list(d.keys()) 
+val_list = list(d.values()) 
+position = val_list.index(y)
+l.append(key_list[position]) 
+print("encrypted message is:") 
+print(l)
+m=[]
+for i in range(len(c)):
+x1=d.get(l[i]) 
+y1=(x1-b+26)%26
+key_list = list(d.keys()) 
+val_list = list(d.values()) 
+position = val_list.index(y1)
+m.append(key_list[position]) 
+print("decrypted message is:") 
+print(m)
